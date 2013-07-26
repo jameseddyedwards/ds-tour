@@ -1,0 +1,196 @@
+<!doctype html>
+ 
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Tour DataSift</title>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="css/reset.css" />
+	<link rel="stylesheet" href="css/structure.css" />
+	<link rel="stylesheet" href="css/fonts.css" />
+	<link rel="stylesheet" href="css/buttons.css" />
+	<link rel="stylesheet" href="css/lists.css" />
+	<link rel="stylesheet" href="css/utilities.css" />
+	<link rel="stylesheet" href="css/global.css" />
+
+	
+	<!-- 
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+	<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+	-->
+
+	<script>
+	/*
+	$(function() {
+		$("#tabs").tabs();
+	});
+	var img_value=null;
+	
+	//Display after let's get started.
+	function showHide() {
+		var ele = document.getElementById("technical");
+		if(ele.style.display == "block") {
+				ele.style.display = "none";
+				return;
+		}
+		else {
+			ele.style.display = "block";
+			return;
+		}
+		
+		
+	}
+	
+	//Display after tech/non-tech
+	function showHide2() {
+		var ele = document.getElementById("role");
+		if(ele.style.display == "block") {
+				ele.style.display = "none";
+				return;
+		}
+		else {
+			ele.style.display = "block";
+			return;
+		}
+		
+		
+	}
+	
+	//Display after role is chosen
+	function showHide3() {
+		var ele = document.getElementById("industry");
+		if(ele.style.display == "block") {
+				ele.style.display = "none";
+				return;
+		}
+		else {
+			ele.style.display = "block";
+			return;
+		}
+		
+		
+	}
+	
+	//Function to hide a div layer (used with onClick)
+	function hideDiv(){
+		var ele = document.getElementById("technical");
+		if(ele.style.display == "block") {
+				ele.style.display = "none";
+				return;
+		}
+	}
+	
+	function hideDiv2(){
+		var ele = document.getElementById("role");
+		if(ele.style.display == "block") {
+				ele.style.display = "none";
+				return;
+		}
+	}
+	
+	/*
+	function getRole(){
+		var form = document.getElementById("role");
+		var inputs = document.getElementByTagName("input");
+		
+		for(var i=0; i<inputs.length; ++i){
+			if(inputs[i].type == "image"){
+				img_value = inputs[i].name;
+				break;
+			}
+		
+		}
+		
+		if(img_value == "executive" || img_value == "marketer" || img_value == "developer" || img_value == "other"){
+				document.write(img_value);
+				return;
+		}
+	}
+	*/
+	
+	
+	</script>
+
+</head>
+<body>
+ 
+	<nav>
+		<ul>
+			<li><a data-target="aggregate" href="#aggregate">Aggregate</a></li>
+			<li><a data-target="enrich" href="#enrich">Enrich</a></li>
+			<li><a data-target="filter" href="#filter">Filter</a></li>
+			<li><a data-target="deliver" href="#deliver">Deliver</a></li>
+			<li><a data-target="get-results" href="#get-results">Results</a></li>
+		</ul>
+	</nav>
+
+	<section>
+
+		<!-- Aggregate -->
+		<div id="aggregate" class="tab active">
+			<h1>Aggregate</h1>
+		</div>
+
+		<!-- Enrich -->
+		<div id="enrich" class="tab">
+			<h1>Enrich</h1>
+		</div>
+		
+		<!-- Filter -->
+		<div id="filter" class="tab">
+			<h1>Filter</h1>
+			<p>Filtering social data in real-time and historically is where DataSift's true power lies. We've collected a library of use cases to help you appreciate the value DataSift provides. Firstly, to make this tour applicable to you and your business we want to understand more about you and your business.</p>
+			<a href="#" class="button">Let's get started</a>
+			
+			<div id="technical" style="display:none; text-align: center;">
+					<h3 ALIGN="CENTER"> Are you technical? </h3>
+					<p ALIGN="CENTER"> Do you like to delve into code or do you like us to take care of the technicalities for you?</p>
+					
+					<!-- SITE WIDE COOKIE SET UP HERE -->
+					<form action="" method="post">
+					<input onclick="showHide2(); hideDiv();" type="button" value="Yes" style="float: inherit;" ></form>
+					<form action="" method="post">
+					<input onclick="showHide2(); hideDiv();" type="button" value="No" style="float: inherit;" ></form>
+					<!-- SITE WIDE COOKIE SET UP HERE -->
+			</div>
+			
+			<div id="role" style="display:none;  text-align: center;">
+				<h3 ALIGN="CENTER">What's your current role? </h3>
+				<p ALIGN="CENTER">The only limitation to DataSift is your imagination so help us provide use cases specific to your role.</p>
+			
+				<input onclick="showHide3(); hideDiv2();" type="image" name="executive" src="img/Executive.jpg" style="float: inherit;" >
+				<input onclick="showHide3(); hideDiv2();" type="image" name="marketer" src="img/Marketer.jpg" style="float: inherit;" >
+				<input onclick="showHide3(); hideDiv2();" type="image" name="developer" src="img/Developer.jpg" style="postion:absolute; left:500px; top:500px;" >
+				<input onclick="showHide3(); hideDiv2();" type="image" name="other" src="img/Other.jpg" style="float: inherit;" >
+			</div>
+			
+			<div id="industry" style="display:none;  text-align: center;">
+				<h3 ALIGN="CENTER">What's your industry? </h3>
+				<p ALIGN="CENTER">The only limitation to DataSift is your imagination so help us provide use cases specific to your industry.</p>
+			
+				<input onclick="" type="image" name="executive" src="img/Analytics.jpg" style="float: inherit;" >
+				<input onclick="" type="image" name="marketer" src="img/BusinessIntelligence.jpg" style="float: inherit;" >
+				<input onclick="" type="image" name="developer" src="img/Retail.jpg" style="postion:absolute; left:500px; top:500px;" >
+				<input onclick="" type="image" name="other" src="img/Other.jpg" style="float: inherit;" >
+			</div>
+		</div>
+
+		<!-- Deliver -->
+		<div id="deliver" class="tab">
+			<h1>Deliver</h1>
+		</div>
+
+		<!-- Get Results -->
+		<div id="get-results" class="tab">
+			<h1>Get Results</h1>
+		</div>
+	</section>
+
+
+	<!-- JS -->
+	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+	<script src="js/global.js"></script>
+
+</body>
+</html>

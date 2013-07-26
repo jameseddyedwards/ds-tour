@@ -1,6 +1,6 @@
 /* Fonts */
 html {font-size:100%; -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%;}
-body {color:#333; font-family:"proxima-nova", helvetica, arial, sans-serif; font-weight:100;}
+body {color:#333; font-family:"proxima-nova", helvetica, arial, sans-serif; font-weight:100; text-align:center;}
 
 /* Textual */
 h1,
@@ -48,8 +48,8 @@ p,
 article div {font:16px/26px "proxima-nova", helvetica, arial, sans-serif; margin-bottom:25px;}
 p small {font-size:9px;}
 
-a {color:#666; display:inline-block; text-decoration:none;}
-a:hover {color:#000; text-decoration:none;
+a {color:#333; display:inline-block; text-decoration:none;}
+a:hover {color:#333; text-decoration:none;
 	transition: color .25s ease-in;
 	-moz-transition: color .25s ease-in;
 	-webkit-transition: color .25s ease-in;
