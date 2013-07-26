@@ -5,7 +5,7 @@ Page is our center aligned 95% width container. We have set it's 'position' as r
 so that the Gridpak overlay will appear in the correct position. We have also updated
 the gridpak.js file to use '.block' as it's container.
 */
-.block {margin:0 auto; max-width:1240px; overflow:hidden; position:relative;}
+.block {margin:0 auto; max-width:960px; overflow:hidden; position:relative;}
 
 /* Reusable column setup */
 .span {border:0px solid rgba(0,0,0,0); float:left; margin-bottom:12px; overflow:hidden; position:relative;
@@ -18,8 +18,7 @@ the gridpak.js file to use '.block' as it's container.
 }
 .span img {width:100%;}
 .span a,
-.span a img {display:block;}
-.span a {position:relative;}
+.span a img {display:inline-block;}
 
 
 /* Mobiles */

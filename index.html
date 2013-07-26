@@ -14,7 +14,10 @@
 	<link rel="stylesheet" href="css/utilities.css" />
 	<link rel="stylesheet" href="css/global.css" />
 
-	
+	<!-- TypeKit -->
+	<script type="text/javascript" src="//use.typekit.net/adx5bpc.js"></script>
+	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
 	<!-- 
 	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
 	<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
@@ -117,73 +120,82 @@
  
 	<nav>
 		<ul>
-			<li><a data-target="aggregate" href="#aggregate">Aggregate</a></li>
-			<li><a data-target="enrich" href="#enrich">Enrich</a></li>
-			<li><a data-target="filter" href="#filter">Filter</a></li>
-			<li><a data-target="deliver" href="#deliver">Deliver</a></li>
-			<li><a data-target="get-results" href="#get-results">Results</a></li>
+			<li><a data-target="aggregate" href="#" class="active">Aggregate</a></li>
+			<li><a data-target="enrich" href="#">Enrich</a></li>
+			<li><a data-target="filter" href="#">Filter</a></li>
+			<li><a data-target="deliver" href="#">Deliver</a></li>
+			<li><a data-target="get-results" href="#">Results</a></li>
 		</ul>
 	</nav>
 
 	<section>
 
 		<!-- Aggregate -->
-		<div id="aggregate" class="tab active">
-			<h1>Aggregate</h1>
+		<div id="aggregate" class="tab block active">
+			<h1>Data Aggregation</h1>
+			<p>Aggregating data plays a crucial role in the DataSift platform. DataSift takes a huge amount of data and normalizes it into a single context that can be understood. You don't need to worry about how this happens but it gives you a context for what happens next.</p>
 		</div>
 
 		<!-- Enrich -->
-		<div id="enrich" class="tab">
+		<div id="enrich" class="tab block">
 			<h1>Enrich</h1>
 		</div>
 		
 		<!-- Filter -->
-		<div id="filter" class="tab">
-			<h1>Filter</h1>
-			<p>Filtering social data in real-time and historically is where DataSift's true power lies. We've collected a library of use cases to help you appreciate the value DataSift provides. Firstly, to make this tour applicable to you and your business we want to understand more about you and your business.</p>
+		<div id="filter" class="tab block">
+			<h1>Filtering</h1>
+			<p>Filtering social data in real-time and historically is where DataSift's true power lies. We've collected a library of example filters to help you understand and appreciate the value DataSift provides.</p>
+			<p>Firstly, to make this tour applicable to you and your business we want to understand more about you and your business.</p>
 			<a href="#" class="button">Let's get started</a>
 			
-			<div id="technical" style="display:none; text-align: center;">
-					<h3 ALIGN="CENTER"> Are you technical? </h3>
-					<p ALIGN="CENTER"> Do you like to delve into code or do you like us to take care of the technicalities for you?</p>
-					
-					<!-- SITE WIDE COOKIE SET UP HERE -->
-					<form action="" method="post">
-					<input onclick="showHide2(); hideDiv();" type="button" value="Yes" style="float: inherit;" ></form>
-					<form action="" method="post">
-					<input onclick="showHide2(); hideDiv();" type="button" value="No" style="float: inherit;" ></form>
-					<!-- SITE WIDE COOKIE SET UP HERE -->
+			<div class="row questions">
+				<div class="span four" id="technical">
+					<h3>1. Are you technical?</h3>
+					<small>Do you like to delve into code or are you happy for us to take care of the technicalities for you?</small>
+					<a class="button" href="">Yes</a>
+					<a class="button" href="">No</a>
+				</div>
+			
+				<div class="span four" id="role">
+					<h3>2. What's your current role?</h3>
+					<small>The only limitation to DataSift is your imagination so help us provide use cases specific to your role.</small>
+					<ul>
+						<li><a class="button" href="">Marketer</a></li>
+						<li><a class="button" href="">Developer</a></li>
+						<li><a class="button" href="">Data Scientist</a></li>
+						<li><a class="button" href="">Executive</a></li>
+						<li><a class="button" href="">Other</a></li>
+					</ul>
+				</div>
+			
+				<div class="span four" id="industry">
+					<h3>3. What's your industry? </h3>
+					<small>The only limitation to DataSift is your imagination so help us provide use cases specific to your industry.</small>				
+					<ul>
+						<li><a class="button" href="">Marketer</a></li>
+						<li><a class="button" href="">Developer</a></li>
+						<li><a class="button" href="">Data Scientist</a></li>
+						<li><a class="button" href="">Executive</a></li>
+						<li><a class="button" href="">Other</a></li>
+					</ul>
+				</div>
+
+				<img src="img/simple-tour.gif" width="100%" />
 			</div>
-			
-			<div id="role" style="display:none;  text-align: center;">
-				<h3 ALIGN="CENTER">What's your current role? </h3>
-				<p ALIGN="CENTER">The only limitation to DataSift is your imagination so help us provide use cases specific to your role.</p>
-			
-				<input onclick="showHide3(); hideDiv2();" type="image" name="executive" src="img/Executive.jpg" style="float: inherit;" >
-				<input onclick="showHide3(); hideDiv2();" type="image" name="marketer" src="img/Marketer.jpg" style="float: inherit;" >
-				<input onclick="showHide3(); hideDiv2();" type="image" name="developer" src="img/Developer.jpg" style="postion:absolute; left:500px; top:500px;" >
-				<input onclick="showHide3(); hideDiv2();" type="image" name="other" src="img/Other.jpg" style="float: inherit;" >
-			</div>
-			
-			<div id="industry" style="display:none;  text-align: center;">
-				<h3 ALIGN="CENTER">What's your industry? </h3>
-				<p ALIGN="CENTER">The only limitation to DataSift is your imagination so help us provide use cases specific to your industry.</p>
-			
-				<input onclick="" type="image" name="executive" src="img/Analytics.jpg" style="float: inherit;" >
-				<input onclick="" type="image" name="marketer" src="img/BusinessIntelligence.jpg" style="float: inherit;" >
-				<input onclick="" type="image" name="developer" src="img/Retail.jpg" style="postion:absolute; left:500px; top:500px;" >
-				<input onclick="" type="image" name="other" src="img/Other.jpg" style="float: inherit;" >
-			</div>
+
+
 		</div>
 
 		<!-- Deliver -->
-		<div id="deliver" class="tab">
+		<div id="deliver" class="tab block">
 			<h1>Deliver</h1>
+			<p>We play nice with lots of different API's on the web. Once you've filtered the data you require then to make use of that data you need access to it. Here are the options available to you:</p>
 		</div>
 
 		<!-- Get Results -->
-		<div id="get-results" class="tab">
-			<h1>Get Results</h1>
+		<div id="get-results" class="tab block">
+			<h1>Drive Results</h1>
+			<p>Social data is growing rapidly. This is why it's important that your business understands its social audience as well as it possibly can. View some of our case studies to see how DataSift has helped grow small, professional and enterprise businesses to take a grasp of the social data revolution.</p>
 		</div>
 	</section>
 

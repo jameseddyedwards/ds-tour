@@ -18,7 +18,7 @@ input[type="search"]::-webkit-search-cancel-button {-webkit-appearance:none;}
 textarea {overflow:auto; vertical-align:top;}
 
 button,
-.button {background-color:#333; border-radius:2px; color:#fff; font:100 16px/30px "proxima-nova", Helvetica; padding:7px 0 8px 0; text-align:center; text-shadow:0 1px 0 #333; width:150px;}
+.button {background-color:#333; border-radius:2px; color:#fff; font:100 16px/24px "proxima-nova", Helvetica; margin:3px; padding:5px 30px; text-align:center; text-shadow:0 1px 0 #333; text-transform:uppercase;}
 button:hover,
 .button:hover {background-color:#444; color:#fff; cursor:pointer;}
 button:active,
