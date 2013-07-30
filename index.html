@@ -24,58 +24,112 @@
 	-->
 
 	<script>
-	/*
-	$(function() {
-		$("#tabs").tabs();
-	});
-	var img_value=null;
 	
-	//Display after let's get started.
+	//DISPLAY HIDDEN DIVS (THERE MUST BE A GENERAL METHOD WE CAN MAKE FOR THIS EDDY AND PUT IN OUR GLOBAL JS FILE!)
+	
 	function showHide() {
 		var ele = document.getElementById("technical");
-		if(ele.style.display == "block") {
-				ele.style.display = "none";
+		
+		if(ele.style.display == "none") {
+				ele.style.display = "block";
 				return;
-		}
-		else {
-			ele.style.display = "block";
-			return;
 		}
 		
 		
 	}
 	
-	//Display after tech/non-tech
 	function showHide2() {
 		var ele = document.getElementById("role");
-		if(ele.style.display == "block") {
-				ele.style.display = "none";
+		
+		if(ele.style.display == "none") {
+				ele.style.display = "block";
 				return;
-		}
-		else {
-			ele.style.display = "block";
-			return;
 		}
 		
 		
 	}
 	
-	//Display after role is chosen
 	function showHide3() {
 		var ele = document.getElementById("industry");
-		if(ele.style.display == "block") {
-				ele.style.display = "none";
+		
+		if(ele.style.display == "none") {
+				ele.style.display = "block";
 				return;
-		}
-		else {
-			ele.style.display = "block";
-			return;
 		}
 		
 		
 	}
 	
-	//Function to hide a div layer (used with onClick)
+	function showHide4() {
+    	var ele = document.getElementById("showme");
+    	
+    	if(ele.style.display == "none") {
+            	ele.style.display = "block";
+            	return;
+      	}
+    	
+	}
+	
+	function showHide5() {
+    	var ele = document.getElementById("filters");
+    	
+    	if(ele.style.display == "none") {
+            	ele.style.display = "block";
+            	return;
+      	}
+    	
+    	
+	}
+	
+	function showHide6() {
+    	var ele = document.getElementById("video");
+    	
+    	if(ele.style.display == "none") {
+            	ele.style.display = "block";
+            	return;
+      	}
+    	
+    	
+	}
+	
+	function showHide7() {
+    	var ele = document.getElementById("notes");
+    	
+    	if(ele.style.display == "none") {
+            	ele.style.display = "block";
+            	return;
+      	}
+    	
+    	
+	}
+	
+	function showHide8() {
+    	var ele = document.getElementById("code");
+    	
+    	if(ele.style.display == "none") {
+            	ele.style.display = "block";
+            	return;
+      	}
+    	
+    	
+	}
+	
+	function showHide9() {
+    	var ele = document.getElementById("sample");
+    	
+    	if(ele.style.display == "none") {
+            	ele.style.display = "block";
+            	return;
+      	}
+    	
+    	
+	}
+	
+	//END SHOW METHODS
+	
+	
+	//HIDE SHOWN DIVS (THERE MUST BE A GENERAL METHOD WE CAN MAKE FOR THIS EDDY AND PUT IN OUR GLOBAL JS FILE!)
+	
 	function hideDiv(){
 		var ele = document.getElementById("technical");
 		if(ele.style.display == "block") {
@@ -92,25 +146,31 @@
 		}
 	}
 	
-	/*
-	function getRole(){
-		var form = document.getElementById("role");
-		var inputs = document.getElementByTagName("input");
-		
-		for(var i=0; i<inputs.length; ++i){
-			if(inputs[i].type == "image"){
-				img_value = inputs[i].name;
-				break;
-			}
-		
-		}
-		
-		if(img_value == "executive" || img_value == "marketer" || img_value == "developer" || img_value == "other"){
-				document.write(img_value);
-				return;
-		}
+	function hideDiv3(){
+		var ele = document.getElementById("industry");
+		if(ele.style.display == "block") {
+            	ele.style.display = "none";
+            	return;
+      	}
 	}
-	*/
+	
+	function hideDiv4(){
+		var ele = document.getElementById("first");
+		if(ele.style.display == "block") {
+            	ele.style.display = "none";
+            	return;
+      	}
+	}
+	
+	function hideDiv5(){
+		var ele = document.getElementById("showme");
+		if(ele.style.display == "block") {
+            	ele.style.display = "none";
+            	return;
+      	}
+	}
+	
+	//END HIDE METHODS
 	
 	
 	</script>
@@ -143,46 +203,99 @@
 		
 		<!-- Filter -->
 		<div id="filter" class="tab block">
-			<h1>Filtering</h1>
-			<p>Filtering social data in real-time and historically is where DataSift's true power lies. We've collected a library of example filters to help you understand and appreciate the value DataSift provides.</p>
-			<p>Firstly, to make this tour applicable to you and your business we want to understand more about you and your business.</p>
-			<a href="#" class="button">Let's get started</a>
+			<div id ="first" style="display: block;">
+				<h1>Filtering</h1>
+				<p>Filtering social data in real-time and historically is where DataSift's true power lies. We've collected a library of example filters to help you understand and appreciate the value DataSift provides.</p>
+				<p>Firstly, to make this tour applicable to you and your business we want to understand more about you and your business.</p>
+			</div>
+			
+			<a onclick="showHide(); style.display = 'none'" href="#" class="button">Let's get started</a>
 			
 			<div class="row questions">
-				<div class="span four" id="technical">
+				<div class="span four" id="technical" style="display: none; text-align: center;">
 					<h3>1. Are you technical?</h3>
 					<small>Do you like to delve into code or are you happy for us to take care of the technicalities for you?</small>
-					<a class="button" href="">Yes</a>
-					<a class="button" href="">No</a>
+					<ul>
+						<li><a onclick="showHide2(); " class="button" >Yes</a></li>
+						<li><a onclick="showHide2(); " class="button" >No</a></li>
+					</ul>
 				</div>
 			
-				<div class="span four" id="role">
+				<div class="span four" id="role"  style="display: none; text-align: center;">
 					<h3>2. What's your current role?</h3>
 					<small>The only limitation to DataSift is your imagination so help us provide use cases specific to your role.</small>
 					<ul>
-						<li><a class="button" href="">Marketer</a></li>
-						<li><a class="button" href="">Developer</a></li>
-						<li><a class="button" href="">Data Scientist</a></li>
-						<li><a class="button" href="">Executive</a></li>
-						<li><a class="button" href="">Other</a></li>
+						<li><a onclick="showHide3();" class="button" >Marketer</a></li>
+						<li><a onclick="showHide3();" class="button" >Developer</a></li>
+						<li><a onclick="showHide3();" class="button" >Data Scientist</a></li>
+						<li><a onclick="showHide3();" class="button" >Executive</a></li>
+						<li><a onclick="showHide3();" class="button" >Other</a></li>
 					</ul>
 				</div>
 			
-				<div class="span four" id="industry">
+				<div class="span four" id="industry" style="display: none; text-align: center;">
 					<h3>3. What's your industry? </h3>
 					<small>The only limitation to DataSift is your imagination so help us provide use cases specific to your industry.</small>				
 					<ul>
-						<li><a class="button" href="">Marketer</a></li>
-						<li><a class="button" href="">Developer</a></li>
-						<li><a class="button" href="">Data Scientist</a></li>
-						<li><a class="button" href="">Executive</a></li>
-						<li><a class="button" href="">Other</a></li>
+						<li><a onclick="showHide4(); hideDiv(); hideDiv2(); hideDiv3();" class="button" >Marketer</a></li>
+						<li><a onclick="showHide4(); hideDiv(); hideDiv2(); hideDiv3();" class="button" >Developer</a></li>
+						<li><a onclick="showHide4(); hideDiv(); hideDiv2(); hideDiv3();" class="button" >Data Scientist</a></li>
+						<li><a onclick="showHide4(); hideDiv(); hideDiv2(); hideDiv3();" class="button" >Executive</a></li>
+						<li><a onclick="showHide4(); hideDiv(); hideDiv2(); hideDiv3();" class="button" >Other</a></li>
 					</ul>
 				</div>
 
-				<img src="img/simple-tour.gif" width="100%" />
+				<!--<img src="img/simple-tour.gif" width="100%" />-->
+				
+				
 			</div>
-
+			
+			<!--KEVIN--IDEA LAYOUT-->
+			<div id="showme" style="text-align: center; display: none;">
+				<a onclick=" hideDiv4(); hideDiv5(); showHide5(); showHide6(); showHide9();" class="button" style="background-color:orange">Show me some filters</a>
+			</div>
+			
+			<div id="filters" style ="display:none;">
+			
+				<h3 ALIGN="CENTER">Sample Filter Page</h3>
+		
+				<div id="filters" style="display: inline-block; float: left; height: 100%; width: 50%;">
+					<object width="50%" height="50%" style ="position:absolute; top:122px; left: 1px;" data="Try.html"></object>
+				</div>
+		
+				<div id="video" style="display: inline-block; float: right; height: 100%; width: 50%">
+					<video width="500" height="500" controls>
+  					<source src="Test.mp4" type="video/mp4">
+  					<source src="Test.ogg" type="video/ogg">
+					Your browser does not support the video tag.
+					</video>
+				</div>
+				
+				<!--
+				<div id="notes" style="display: hidden; text-align: left; clear: both;">
+					<font color="orange"> Note: This is a demo version only and for security purposes is not extracting real data.</small>
+				</div>
+				
+				<div id="code" style="display: hidden; text-align: right;">
+					<small> View the compiled CSDL Code:</small>
+				</div>
+				-->
+				
+				<div id="sample" style="display: none; text-align:center; clear: both;">
+					<ul>
+						<h3 ALIGN="CENTER">Take A Sample</h3>
+						<small>So you can understand the data and filtering capability we provide, we would like to share this data with you.</small>
+						<small>Simply complete the form below and we will send you a link to a .csv file containing this example data. If you sign up for a DataSift account we will also share this filter with you so you can use it in your account. </small>
+						<li><input type="text" placeholder="Name" ></li>
+						<li><input type="text" placeholder="Email" ></li>
+						<li><input type="text" placeholder="Twitter Username" ></li>
+						<li><a onclick="" class="button" >Send Me a Sample</a></li>
+					</ul>
+				</div>
+			
+	   		</div>
+	   		
+	 
 
 		</div>
 
