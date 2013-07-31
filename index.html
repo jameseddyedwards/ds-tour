@@ -120,80 +120,87 @@
  
 	<nav>
 		<ul>
-			<li><a data-target="aggregate" href="#" class="active">Aggregate</a></li>
+			<li><a data-target="aggregate" href="#">Aggregate</a></li>
 			<li><a data-target="enrich" href="#">Enrich</a></li>
-			<li><a data-target="filter" href="#">Filter</a></li>
+			<li><a data-target="filter" href="#" class="active">Filter</a></li>
 			<li><a data-target="deliver" href="#">Deliver</a></li>
-			<li><a data-target="get-results" href="#">Results</a></li>
+			<li><a data-target="results" href="#">Results</a></li>
 		</ul>
 	</nav>
 
 	<section>
 
 		<!-- Aggregate -->
-		<div id="aggregate" class="tab block active">
+		<div id="aggregate" class="aggregate tab block">
 			<h1>Data Aggregation</h1>
 			<p>Aggregating data plays a crucial role in the DataSift platform. DataSift takes a huge amount of data and normalizes it into a single context that can be understood. You don't need to worry about how this happens but it gives you a context for what happens next.</p>
 		</div>
 
 		<!-- Enrich -->
-		<div id="enrich" class="tab block">
+		<div id="enrich" class="enrich tab block">
 			<h1>Enrich</h1>
 		</div>
 		
 		<!-- Filter -->
-		<div id="filter" class="tab block">
+		<div id="filter" class="filter tab block active">
 			<h1>Filtering</h1>
-			<p>Filtering social data in real-time and historically is where DataSift's true power lies. We've collected a library of example filters to help you understand and appreciate the value DataSift provides.</p>
-			<p>Firstly, to make this tour applicable to you and your business we want to understand more about you and your business.</p>
-			<a href="#" class="button">Let's get started</a>
+			<p>Filtering social data in real-time and historically is where DataSift's true power lies. We've created a library of example filters to help you understand and appreciate the value DataSift provides.</p>
+			<div id="info">
+				<h3>Ready?</h3>
+				<p>To make this tour applicable to you we've got a few questions to understand a little bit about you and your business.</p>
+				<a id="start" href="#" class="button">Let's get started</a>
+			</div>
 			
-			<div class="row questions">
+			<div id="questions" class="questions row questions">
 				<div class="span four" id="technical">
-					<h3>1. Are you technical?</h3>
-					<small>Do you like to delve into code or are you happy for us to take care of the technicalities for you?</small>
-					<a class="button" href="">Yes</a>
-					<a class="button" href="">No</a>
+					<div class="question">
+						<h3><span>1</span> Are you technical?</h3>
+						<p>There are two sides to DataSift. We want to know which is best for you?</p>
+						<a class="button" href="">Yes</a>
+						<a class="button" href="">No</a>
+					</div>
 				</div>
 			
 				<div class="span four" id="role">
-					<h3>2. What's your current role?</h3>
-					<small>The only limitation to DataSift is your imagination so help us provide use cases specific to your role.</small>
-					<ul>
-						<li><a class="button" href="">Marketer</a></li>
-						<li><a class="button" href="">Developer</a></li>
-						<li><a class="button" href="">Data Scientist</a></li>
-						<li><a class="button" href="">Executive</a></li>
-						<li><a class="button" href="">Other</a></li>
-					</ul>
+					<div class="question">
+						<h3><span>2</span> What's your role?</h3>
+						<p>To help us provide use cases specific to your role.</p>
+						<a class="button small" href="">Marketer</a>
+						<a class="button small" href="">Developer</a>
+						<a class="button small" href="">Data Scientist</a>
+						<a class="button small" href="">Executive</a>
+						<a class="button small" href="">Other</a>
+					</div>
 				</div>
 			
 				<div class="span four" id="industry">
-					<h3>3. What's your industry? </h3>
-					<small>The only limitation to DataSift is your imagination so help us provide use cases specific to your industry.</small>				
-					<ul>
-						<li><a class="button" href="">Marketer</a></li>
-						<li><a class="button" href="">Developer</a></li>
-						<li><a class="button" href="">Data Scientist</a></li>
-						<li><a class="button" href="">Executive</a></li>
-						<li><a class="button" href="">Other</a></li>
-					</ul>
+					<div class="question">
+						<h3><span>3</span> What's your industry?</h3>
+						<p>Let us show you how DataSift integrates for others in your industry.</p>				
+						<a class="button small" href="">Marketer</a>
+						<a class="button small" href="">Developer</a>
+						<a class="button small" href="">Data Scientist</a>
+						<a class="button small" href="">Executive</a>
+						<a class="button small" href="">Other</a>
+					</div>
 				</div>
 
-				<img src="img/simple-tour.gif" width="100%" />
 			</div>
 
+			<div id="tour-filter" class="tour-filter">
+				<img src="img/simple-tour.gif" width="100%" />
+			</div>
 
 		</div>
 
 		<!-- Deliver -->
-		<div id="deliver" class="tab block">
+		<div id="deliver" class="deliver tab block">
 			<h1>Deliver</h1>
 			<p>We play nice with lots of different API's on the web. Once you've filtered the data you require then to make use of that data you need access to it. Here are the options available to you:</p>
 		</div>
 
 		<!-- Get Results -->
-		<div id="get-results" class="tab block">
+		<div id="results" class="results tab block">
 			<h1>Drive Results</h1>
 			<p>Social data is growing rapidly. This is why it's important that your business understands its social audience as well as it possibly can. View some of our case studies to see how DataSift has helped grow small, professional and enterprise businesses to take a grasp of the social data revolution.</p>
 		</div>

@@ -1,6 +1,11 @@
 $(function(){
 
-	var nav = $("a", "nav");
+	var nav = $("a", "nav"),
+		userInfo = {
+			technical : null,
+			role : null,
+			industry : null
+		};
 
 	nav.click(function(){
 		var targetId = "#" + $(this).data("target"),
@@ -11,6 +16,15 @@ $(function(){
 		
 		tabs.removeClass("active");
 		$(targetId).addClass("active");
+	});
+
+	$("#start").click(function(){
+		$("#info").hide();
+		$("#questions").show();
+	});
+
+	$(".button").click(function(event){
+		event.preventDefault();
 	});
 
 });
