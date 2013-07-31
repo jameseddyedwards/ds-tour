@@ -27,6 +27,7 @@
 	
 	//DISPLAY HIDDEN DIVS (THERE MUST BE A GENERAL METHOD WE CAN MAKE FOR THIS EDDY AND PUT IN OUR GLOBAL JS FILE!)
 	
+	/*
 	function showHide() {
 		var ele = document.getElementById("technical");
 		
@@ -126,10 +127,11 @@
 	}
 	
 	//END SHOW METHODS
+	*/
 	
 	
 	//HIDE SHOWN DIVS (THERE MUST BE A GENERAL METHOD WE CAN MAKE FOR THIS EDDY AND PUT IN OUR GLOBAL JS FILE!)
-	
+	/*
 	function hideDiv(){
 		var ele = document.getElementById("technical");
 		if(ele.style.display == "block") {
@@ -171,7 +173,7 @@
 	}
 	
 	//END HIDE METHODS
-	
+	*/
 	
 	</script>
 
@@ -196,10 +198,12 @@
 			<p>Aggregating data plays a crucial role in the DataSift platform. DataSift takes a huge amount of data and normalizes it into a single context that can be understood. You don't need to worry about how this happens but it gives you a context for what happens next.</p>
 		</div>
 
+
 		<!-- Enrich -->
 		<div id="enrich" class="enrich tab block">
 			<h1>Enrich</h1>
 		</div>
+
 		
 		<!-- Filter -->
 		<div id="filter" class="filter tab block active">
@@ -210,6 +214,7 @@
 				<p>To make this tour applicable to you we've got a few questions to understand a little bit about you and your business.</p>
 				<a id="start" href="#" class="button">Let's get started</a>
 			</div>
+
 			
 			<div id="questions" class="questions row questions">
 				<div class="span four" id="technical">
@@ -246,61 +251,56 @@
 				</div>
 
 				<!--<img src="img/simple-tour.gif" width="100%" />-->
-				
+				<a id="showme" class="button">Show me some filters</a>
 				
 			</div>
-			
-			<!--KEVIN--IDEA LAYOUT-->
-			<div id="showme" style="text-align: center; display: none;">
-				<a onclick=" hideDiv4(); hideDiv5(); showHide5(); showHide6(); showHide9();" class="button" style="background-color:orange">Show me some filters</a>
-			</div>
-			
-			<div id="filters" style ="display:none;">
-			
-				<h3 ALIGN="CENTER">Sample Filter Page</h3>
+		</div>
+
+		<!-- Filter Library -->
+		<div id="filters" class="filters">
 		
-				<div id="video" style="display: inline-block; float: left; height: 50%; width: 50%;">
-					<h2 ALIGN="CENTER">View Demo</h2>
+			<h3>Sample Filter Page</h3>
+		
+			<div class="row">
+				<div class="video span six">
+					<h2>View Demo</h2>
 					<video width="500" height="400" controls>
-  					<source src="Test.mp4" type="video/mp4">
-  					<source src="Test.ogg" type="video/ogg">
-					Your browser does not support the video tag.
+						<source src="video/_test.mp4" type="video/mp4">
+						<source src="video/_test.ogg" type="video/ogg">
+						Your browser does not support the video tag.
 					</video>
 				</div>
-				
-		
-				<div id="filters" style="display: inline-block; float: right; height: 50%; width: 50%">
-					<h2 ALIGN="CENTER">Follow Along</h2>
-					<object width="50%" height="50%" style ="position:absolute; top:145px; left: 500px; " data="Try.html "></object>
-				</div>
-				
-				<!--
-				<div id="notes" style="display: hidden; text-align: left; clear: both;">
-					<font color="orange"> Note: This is a demo version only and for security purposes is not extracting real data.</small>
-				</div>
-				
-				<div id="code" style="display: hidden; text-align: right;">
-					<small> View the compiled CSDL Code:</small>
-				</div>
-				-->
-				
-				<div id="sample" style="display: none; text-align:center; clear: both;  border:2px solid; border-radius:25px;">
-					<ul>
-						<h3 ALIGN="CENTER">Take A Sample</h3>
-						<small>So you can understand the data and filtering capability we provide, we would like to share this data with you.</small>
-						<small>Simply complete the form below and we will send you a link to a .csv file containing this example data. If you sign up for a DataSift account we will also share this filter with you so you can use it in your account. </small>
-						<li><input type="text" placeholder="Name" ></li>
-						<li><input type="text" placeholder="Email" ></li>
-						<li><input type="text" placeholder="Twitter Username" ></li>
-						<li><a onclick="" class="button" >Send Me a Sample</a></li>
-					</ul>
-				</div>
 			
-	   		</div>
-	   		
-	 
+	
+				<div class="query-builder span six">
+					<h2>Follow Along</h2>
+					<object width="50%" height="50%" data="try.html"></object>
+				</div>
+			</div>
+			
+			<!--
+			<div id="notes" style="display: hidden; text-align: left; clear: both;">
+				<font color="orange"> Note: This is a demo version only and for security purposes is not extracting real data.</small>
+			</div>
+			
+			<div id="code" style="display: hidden; text-align: right;">
+				<small> View the compiled CSDL Code:</small>
+			</div>
+			-->
+			
+			<div class="sample">
+				<h3>Take A Sample</h3>
+				<small>So you can understand the data and filtering capability we provide, we would like to share this data with you.</small>
+				<small>Simply complete the form below and we will send you a link to a .csv file containing this example data. If you sign up for a DataSift account we will also share this filter with you so you can use it in your account. </small>
+				<ul>
+					<li><input type="text" placeholder="Name"></li>
+					<li><input type="text" placeholder="Email"></li>
+					<li><input type="text" placeholder="Twitter Username"></li>
+					<li><a class="button">Send Me a Sample</a></li>
+				</ul>
+			</div>
+   		</div>
 
-		</div>
 
 		<!-- Deliver -->
 		<div id="deliver" class="deliver tab block">

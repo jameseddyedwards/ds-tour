@@ -26,3 +26,6 @@ section .active {display:block;}
 .role .button {font-size:12px; line-height:12px; padding:4px 6px;}
 
 .tour-filter {display:none;}
+.video {display:inline-block; float:left; height:50%; width:50%;}
+.filters {display:none;}
+.sample {border:2px solid; border-radius:25px;}
