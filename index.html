@@ -45,7 +45,7 @@
 			<h1>Enrich</h1>
 		</div>
 
-		
+
 		<!-- Filter -->
 		<div id="filter" class="filter tab active">
 			<div class="block">
@@ -57,42 +57,41 @@
 					<a href="#" class="button next-step" data-target="questions">Let's get started</a>
 				</div>
 
-				
+
 				<div id="questions" class="questions row step">
 					<div class="span four" id="technical">
 						<div class="question">
 							<h3><span>1</span> Are you technical?</h3>
 							<p>There are two sides to DataSift. We want to know which is best for you?</p>
-							<a class="button" href="#" data-answer="true">Yes</a>
-							<a class="button" href="#" data-answer="false">No</a>
+							<a class="button technical" href="#" data-answer="true">Yes</a>
+							<a class="button technical" href="#" data-answer="false">No</a>
 						</div>
 					</div>
-				
+
 					<div class="span four" id="role">
 						<div class="question">
 							<h3><span>2</span> What's your role?</h3>
 							<p>To help us provide use cases specific to your role.</p>
-							<a class="button small" href="">Marketer</a>
-							<a class="button small" href="">Developer</a>
-							<a class="button small" href="">Data Scientist</a>
-							<a class="button small" href="">Executive</a>
-							<a class="button small" href="">Other</a>
+							<a class="button small role" href="">Marketer</a>
+							<a class="button small role" href="">Developer</a>
+							<a class="button small role" href="">Data Scientist</a>
+							<a class="button small role" href="">Executive</a>
+							<a class="button small role" href="">Other</a>
 						</div>
 					</div>
-				
+
 					<div class="span four" id="industry">
 						<div class="question">
 							<h3><span>3</span> What's your industry?</h3>
 							<p>Let us show you how DataSift integrates for others in your industry.</p>				
-							<a class="button small" href="">Marketer</a>
-							<a class="button small" href="">Developer</a>
-							<a class="button small" href="">Data Scientist</a>
-							<a class="button small" href="">Executive</a>
-							<a class="button small" href="">Other</a>
+							<a class="button small industry" href="">Marketer</a>
+							<a class="button small industry" href="">Developer</a>
+							<a class="button small industry" href="">Data Scientist</a>
+							<a class="button small industry" href="">Executive</a>
+							<a class="button small industry" href="">Other</a>
 						</div>
 					</div>
-
-					<a id="showme" class="button next-step" data-target="filters">Show me some filters</a>
+					<a id="showme" class="button next-step showme" data-target="filters">Show me some filters</a>
 					<!-- On click we loop over our JSON object and output html into the page based on the users selection -->
 
 					<!-- On click of one of the filters we load that video up into the below template: -->
@@ -102,9 +101,9 @@
 
 			<!-- Filter Library -->
 			<div id="filters" class="filters">
-			
+
 				<h2>Sample Filter Page</h2>
-			
+
 				<div class="row">
 					<div class="video span six">
 						<h2>View Demo</h2>
@@ -113,15 +112,18 @@
 							<source src="video/_test.ogg" type="video/ogg">
 							Your browser does not support the video tag.
 						</video>
+						<p>NOTE: This is a demo version only and for security purposes is not extracting real data.</p>
 					</div>
-				
-		
+					
+
 					<div class="query-builder span six">
 						<h2>Follow Along</h2>
-						<object width="50%" height="50%" data="try.html"></object>
+						<object width="100%" height="50%" data="Try.html"></object>
+						<p>View the compiled code in CSDL:</p>
 					</div>
+					
 				</div>
-				
+
 
 				<div class="block">					
 					<div class="sample">
@@ -155,6 +157,14 @@
 		</div>
 	</section>
 
+
+	<!-- JS -->
+	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+	<script src="js/global.js"></script>
+	
+
+</body>
+</html>
 
 	<!-- JS -->
 	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
