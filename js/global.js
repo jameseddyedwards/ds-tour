@@ -3,7 +3,28 @@ $(function(){
 	// Navigation
 	var nav = $("a", "nav"),
 		steps = $(".step"),
-		nextStep = $(".next-step");
+		nextStep = $(".next-step"),
+		user = {
+			technicality : null,
+			role : null,
+			industry : null
+		},
+		videoRootUrl = "",
+		filters = [{
+			name : "filter name",
+			file : "video-file",
+			roles : ["list", "list"],
+			technical : true,
+			industries : ["list", "list"]
+		}, {
+			name : "filter name",
+			file : "video-file",
+			roles : ["list", "list"],
+			technical : true,
+			industries : ["list", "list"]
+		}];
+
+	console.log(filters);
 
 	nav.click(function() {
 		var targetId = $("#" + $(this).data("target")),
@@ -34,14 +55,5 @@ $(function(){
 	$(".button").click(function(event){
 		event.preventDefault();
 	});
-
-	$("#showme").click(function() {
-		$("#questions").hide();
-		$("#filters").show();
-	});
-
-
-
-
 
 });
