@@ -2,7 +2,8 @@ $(function(){
 
 	// Navigation
 	var nav = $("a", "nav"),
-		steps = $(".step");
+		steps = $(".step"),
+		nextStep = $(".next-step");
 
 	nav.click(function() {
 		var targetId = $("#" + $(this).data("target")),
@@ -22,15 +23,12 @@ $(function(){
 		$("#questions").show();
 	});
 
-	steps.click(function() {
-		var targetId = $("#" + $(this).data("target"));
+	// Generic Step Function
+	nextStep.click(function() {
+		var nextStepId = $("#" + $(this).data("target"));
 
-		steps.removeClass("active");
-
-		nav.removeClass("active");
-		$(this).addClass("active");
-		$("#info").hide();
-		$("#questions").show();
+		steps.hide();
+		nextStepId.show();
 	});
 
 	$(".button").click(function(event){
@@ -41,5 +39,9 @@ $(function(){
 		$("#questions").hide();
 		$("#filters").show();
 	});
+
+
+
+
 
 });

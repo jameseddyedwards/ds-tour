@@ -209,14 +209,14 @@
 		<div id="filter" class="filter tab block active">
 			<h1>Filtering</h1>
 			<p>Filtering social data in real-time and historically is where DataSift's true power lies. We've created a library of example filters to help you understand and appreciate the value DataSift provides.</p>
-			<div id="info">
+			<div id="info" class="step">
 				<h3>Ready?</h3>
 				<p>To make this tour applicable to you we've got a few questions to understand a little bit about you and your business.</p>
-				<a id="start" href="#" class="button">Let's get started</a>
+				<a href="#" class="button next-step" data-target="questions">Let's get started</a>
 			</div>
 
 			
-			<div id="questions" class="questions row questions">
+			<div id="questions" class="questions row step">
 				<div class="span four" id="technical">
 					<div class="question">
 						<h3><span>1</span> Are you technical?</h3>
@@ -251,7 +251,7 @@
 				</div>
 
 				<!--<img src="img/simple-tour.gif" width="100%" />-->
-				<a id="showme" class="button">Show me some filters</a>
+				<a id="showme" class="button next-step" data-target="filters">Show me some filters</a>
 				
 			</div>
 		</div>
@@ -259,12 +259,12 @@
 		<!-- Filter Library -->
 		<div id="filters" class="filters">
 		
-			<h3>Sample Filter Page</h3>
+			<h2>Sample Filter Page</h2>
 		
 			<div class="row">
 				<div class="video span six">
 					<h2>View Demo</h2>
-					<video width="500" height="400" controls>
+					<video width="100%" controls>
 						<source src="video/_test.mp4" type="video/mp4">
 						<source src="video/_test.ogg" type="video/ogg">
 						Your browser does not support the video tag.
@@ -287,17 +287,18 @@
 				<small> View the compiled CSDL Code:</small>
 			</div>
 			-->
-			
-			<div class="sample">
-				<h3>Take A Sample</h3>
-				<small>So you can understand the data and filtering capability we provide, we would like to share this data with you.</small>
-				<small>Simply complete the form below and we will send you a link to a .csv file containing this example data. If you sign up for a DataSift account we will also share this filter with you so you can use it in your account. </small>
-				<ul>
-					<li><input type="text" placeholder="Name"></li>
-					<li><input type="text" placeholder="Email"></li>
-					<li><input type="text" placeholder="Twitter Username"></li>
-					<li><a class="button">Send Me a Sample</a></li>
-				</ul>
+			<div class="block">
+				<div class="sample">
+					<h2>Take A Sample</h2>
+					<small>So you can understand the data and filtering capability we provide, we would like to share this data with you.</small>
+					<small>Simply complete the form below and we will send you a link to a .csv file containing this example data. If you sign up for a DataSift account we will also share this filter with you so you can use it in your account. </small>
+					<ul>
+						<li><input type="text" placeholder="Name"></li>
+						<li><input type="text" placeholder="Email"></li>
+						<li><input type="text" placeholder="Twitter Username"></li>
+						<li><a class="button">Send Me a Sample</a></li>
+					</ul>
+				</div>
 			</div>
    		</div>
 

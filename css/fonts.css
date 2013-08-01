@@ -23,7 +23,7 @@ h1 {margin:40px 0 30px;}
 h1 small {font-size:18px;}
 
 h2,
-h2 a {font:italic 21px/28px georgia, times, serif;}
+h2 a {font:italic 21px/28px "proxima-nova", helvetica, arial, sans-serif;}
 h2 {margin:0 0 60px; text-align:center;}
 h2 small {font-size:18px;}
 
