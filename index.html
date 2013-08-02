@@ -59,36 +59,36 @@
 
 
 				<div id="questions" class="questions row step">
-					<div class="span four" id="technical">
-						<div class="question">
+					<div class="span four">
+						<div class="question" data-question-type="technical">
 							<h3><span>1</span> Are you technical?</h3>
 							<p>There are two sides to DataSift. We want to know which is best for you?</p>
-							<a class="button technical" href="#" data-answer="true">Yes</a>
-							<a class="button technical" href="#" data-answer="false">No</a>
+							<a class="button" href="#" data-value="true">Yes</a>
+							<a class="button" href="#" data-value="false">No</a>
 						</div>
 					</div>
 
-					<div class="span four" id="role">
-						<div class="question">
+					<div class="span four">
+						<div class="question" data-question-type="role">
 							<h3><span>2</span> What's your role?</h3>
 							<p>To help us provide use cases specific to your role.</p>
-							<a class="button small role" href="">Marketer</a>
-							<a class="button small role" href="">Developer</a>
-							<a class="button small role" href="">Data Scientist</a>
-							<a class="button small role" href="">Executive</a>
-							<a class="button small role" href="">Other</a>
+							<a class="button small" href="#" data-value="marketer">Marketer</a>
+							<a class="button small" href="#" data-value="developer">Developer</a>
+							<a class="button small" href="#" data-value="data-scientist">Data Scientist</a>
+							<a class="button small" href="#" data-value="executive">Executive</a>
+							<a class="button small" href="#" data-value="other">Other</a>
 						</div>
 					</div>
 
-					<div class="span four" id="industry">
-						<div class="question">
+					<div class="span four">
+						<div class="question" data-question-type="industry">
 							<h3><span>3</span> What's your industry?</h3>
 							<p>Let us show you how DataSift integrates for others in your industry.</p>				
-							<a class="button small industry" href="">Marketer</a>
-							<a class="button small industry" href="">Developer</a>
-							<a class="button small industry" href="">Data Scientist</a>
-							<a class="button small industry" href="">Executive</a>
-							<a class="button small industry" href="">Other</a>
+							<a class="button small" href="#" data-value="social-tech">Social Tech</a>
+							<a class="button small" href="#" data-value="analytics">Analytics</a>
+							<a class="button small" href="#" data-value="agency">Agency</a>
+							<a class="button small" href="#" data-value="academic">Academic</a>
+							<a class="button small" href="#" data-value="other">Other</a>
 						</div>
 					</div>
 					<a id="showme" class="button next-step showme" data-target="filters">Show me some filters</a>
@@ -100,7 +100,13 @@
 
 
 			<!-- Filter Library -->
-			<div id="filters" class="filters">
+			<div id="filters">
+				<!-- Populated with Json object iteration on page load -->
+			</div>
+
+
+			<!-- Filter Library -->
+			<div id="filter-demo" class="filter-demo step">
 
 				<h2>Sample Filter Page</h2>
 
@@ -162,13 +168,6 @@
 	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
 	<script src="js/global.js"></script>
 	
-
-</body>
-</html>
-
-	<!-- JS -->
-	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-	<script src="js/global.js"></script>
 
 </body>
 </html>

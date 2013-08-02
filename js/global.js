@@ -5,7 +5,7 @@ $(function(){
 		steps = $(".step"),
 		nextStep = $(".next-step"),
 		user = {
-			technicality : null,
+			technical : null,
 			role : null,
 			industry : null
 		},
@@ -19,12 +19,20 @@ $(function(){
 		}, {
 			name : "filter name",
 			file : "video-file",
-			roles : ["list", "list"],
+			classes : ["list", "list"],
 			technical : true,
 			industries : ["list", "list"]
-		}];
+		}],
+		html = "",
+		i = 0;
 
-	console.log(filters);
+	
+	// Populate filter list
+	for (var i=0; i<filters.length; i++) {
+		html += '<span class="name">' + filters[i].name + '</span>';
+	}
+	$("#filters").append(html);
+
 
 	nav.click(function() {
 		var targetId = $("#" + $(this).data("target")),
@@ -58,24 +66,30 @@ $(function(){
 	
 	//--------------*NEW*----------------------------------How can we began the process of creating a filter's library page. //
 	
-	$(".technical").click(function(){
+	$(".button", ".question").click(function(){
+
+		var questionParent = $(this).parent(".question"),
+			questionType = $(this).data("question-type"),
+			value = $(this).data("value");
+
+		$(this).addClass("selected");
+
+		$(".button", questionParent).not($(this)).removeClass("selected");
 		
-		$(this).addClass("activebutton-tech");
-		
-		if($('.activebutton-tech').length){
-			$('.activebutton-tech').not($(this)).removeClass('activebutton-tech');
-		} 
-		
-		var technicalityId = $("#" + $(this).data("target"));
-		
-		user.technicality = technicalityId; //set the user's technicality
+		if (questionParent.data("question-type") == "role") {
+			user.role = value;
+		} else if (questionParent.data("question-type") == "technical") {
+			user.technical = value;
+		} else if (questionParent.data("question-type") == "industry") {
+			user.industry = value;
+		}
 		
 		displayFiltersbutton();
 	});
-	
+	/*
 	$(".role").click(function(){
 		
-		$(this).addClass("activebutton-role");
+		$(this).addClass("selected");
 		
 		if($('.activebutton-role').length){
 			$('.activebutton-role').not($(this)).removeClass('activebutton-role');
@@ -90,7 +104,7 @@ $(function(){
 	
 	$(".industry").click(function(){
 		
-		$(this).addClass("activebutton-ind");
+		$(this).addClass("selected");
 		
 		if($('.activebutton-ind').length){
 			$('.activebutton-ind').not($(this)).removeClass('activebutton-ind');
@@ -103,24 +117,21 @@ $(function(){
 		displayFiltersbutton();
 		  
 	});
-	
-	function checkifFull(){ //This will check to see if all fields are selected and we can display the 'Show me Some Filters' button. 
-							//To be called by display filters button!
-		var flag = false;
-		
-		if(user.technicality != null && user.role != null && user.industry != null){
-			flag = true;
+*/
+	// This will check to see if all fields are selected and we can display the 'Show me Some Filters' button. 
+	// To be called by display filters button!
+	function checkifFull () {
+		if (user.technical != null && user.role != null && user.industry != null){
+			return true;
+		} else {
+			return false;
 		}
-		
-		return flag; 
 	}
 	
 	function displayFiltersbutton(){ 
-		if(checkifFull() == true){
+		if (checkifFull()){
 			$("#showme").show();
 		}
-		
-		return;
 	}
 
 });
