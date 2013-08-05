@@ -29,11 +29,17 @@ $(function(){
 
 	
 	// Populate filter list
-	for (var i=0; i<filters.length; i++) {
-		var imgUrl = imgRootUrl + filters[i].file + ".png";
-		html += '<span class="name">' + filters[i].name + '</span>';
-		html += '<img src="' + imgUrl + '" alt="' + filters[i].name + '" />';
-	}
+	html += '<ul>';
+		for (var i=0; i<filters.length; i++) {
+			var imgUrl = imgRootUrl + filters[i].file + ".png";
+
+			html += '<li>';
+			html += '<span class="name">' + filters[i].name + '</span>';
+			html += '<img src="' + imgUrl + '" alt="' + filters[i].name + '" />';
+			html += '</li>';
+		}
+	html += '</ul>';
+
 	$("#filters").append(html);
 
 
