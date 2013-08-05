@@ -10,38 +10,39 @@ $(function(){
 			industry : null
 		},
 		imgRootUrl = "img/filter/",
-		videoRootUrl = "",
+		videoRootUrl = "video/",
 		filters = [{
-			name : "filter name",
-			file : "video-file",
+			name : "Sample Filter",
+			vfile : "video-file", //video file
+			ifile : "map", //image file
 			classList : ["technical", "marketing"]
 		}, {
-			name : "filter name",
-			file : "video-file",
+			name : "Sample Filter2",
+			vfile : "video-file",
+			ifile : "map",
 			classList : ["agency"]
 		}],
 		html = "",
 		i = 0;
 
-	
+
 	// Populate filter list
 	html += '<ul>';
 		for (var i=0; i<filters.length; i++) {
-			var imgUrl = imgRootUrl + filters[i].file + ".png",
-				classList = "";
+			var imgUrl = imgRootUrl + filters[i].ifile + ".png",
+			classList = "";
 
 			classList = filters[i].classList.join(" ");
-			
+
 			console.log(classList);
 
 			html += '<li class="' + classList + '">';
 			html += '<span class="name">' + filters[i].name + '</span>';
-			html += '<img src="' + imgUrl + '" alt="' + filters[i].name + '" />';
+			html += '<img src="' + imgUrl + '" alt="' + filters[i].name + '" height ="300" width="300" />';
 			html += '</li>';
 		}
 	html += '</ul>';
-
-	$("#filters").append(html);
+	
 
 
 	nav.click(function() {
@@ -73,9 +74,9 @@ $(function(){
 	$(".button").click(function(event){
 		event.preventDefault();
 	});
-	
+
 	//--------------*NEW*----------------------------------How can we began the process of creating a filter's library page. //
-	
+
 	$(".button", ".question").click(function(){
 
 		var questionParent = $(this).parent(".question"),
@@ -85,7 +86,7 @@ $(function(){
 		$(this).addClass("selected");
 
 		$(".button", questionParent).not($(this)).removeClass("selected");
-		
+
 		if (questionParent.data("question-type") == "role") {
 			user.role = value;
 		} else if (questionParent.data("question-type") == "technical") {
@@ -93,41 +94,11 @@ $(function(){
 		} else if (questionParent.data("question-type") == "industry") {
 			user.industry = value;
 		}
-		
+
 		displayFiltersbutton();
 	});
-	/*
-	$(".role").click(function(){
-		
-		$(this).addClass("selected");
-		
-		if($('.activebutton-role').length){
-			$('.activebutton-role').not($(this)).removeClass('activebutton-role');
-		}
-		
-		var roleId = $("#" + $(this).data("target"));
-		
-		user.role = roleId; //set the user's role
-		
-		displayFiltersbutton();
-	});
-	
-	$(".industry").click(function(){
-		
-		$(this).addClass("selected");
-		
-		if($('.activebutton-ind').length){
-			$('.activebutton-ind').not($(this)).removeClass('activebutton-ind');
-		} 
-		
-		var industryId = $("#" + $(this).data("target"));
-		
-		user.industry = industryId; //set the user's industry
-		
-		displayFiltersbutton();
-		  
-	});
-*/
+
+
 	// This will check to see if all fields are selected and we can display the 'Show me Some Filters' button. 
 	// To be called by display filters button!
 	function checkifFull () {
@@ -137,11 +108,22 @@ $(function(){
 			return false;
 		}
 	}
-	
+
 	function displayFiltersbutton(){ 
 		if (checkifFull()){
 			$("#showme").show();
 		}
 	}
+	
+	$("#switch1").click(function() {
+    	$("#csdlcode").toggle();
+    	$("#query").toggle(); //can we save the current query state in a cookie?
+	});
+	
+	//Append the HTML once the user clicks the 'Show me some Filters' button.
+	$("#showme").click(function() {
+		$("#filters").append(html);
+	});
+
 
 });
