@@ -60,23 +60,23 @@
 
 				<div id="questions" class="questions row step">
 					<div class="span four">
-						<div class="question" data-question-type="technical">
-							<h3><span>1</span> Are you technical?</h3>
-							<p>There are two sides to DataSift. We want to know which is best for you?</p>
-							<a class="button" href="#" data-value="true">Yes</a>
-							<a class="button" href="#" data-value="false">No</a>
-						</div>
-					</div>
-
-					<div class="span four">
 						<div class="question" data-question-type="role">
-							<h3><span>2</span> What's your role?</h3>
+							<h3><span>1</span> What's your role?</h3>
 							<p>To help us provide use cases specific to your role.</p>
 							<a class="button small" href="#" data-value="marketer">Marketer</a>
 							<a class="button small" href="#" data-value="developer">Developer</a>
 							<a class="button small" href="#" data-value="data-scientist">Data Scientist</a>
 							<a class="button small" href="#" data-value="executive">Executive</a>
 							<a class="button small" href="#" data-value="other">Other</a>
+						</div>
+					</div>
+
+					<div class="span four">
+						<div class="question" data-question-type="technical">
+							<h3><span>2</span> Are you technical?</h3>
+							<p>There are two sides to DataSift. We want to know which is best for you?</p>
+							<a class="button" href="#" data-value="true">Yes</a>
+							<a class="button" href="#" data-value="false">No</a>
 						</div>
 					</div>
 
@@ -100,52 +100,64 @@
 
 
 			<!-- Filter Library -->
-			<div id="filters">
+			<div id="filters" >
 				<!-- Populated with Json object iteration on page load -->
 			</div>
 
 
 			<!-- Filter Library -->
-			<div id="filter-demo" class="filter-demo step">
+			<div id="filter-demo" class="filter-demo">
 
 				<h2>Sample Filter Page</h2>
+				
+				<p>Filter Description....</p>
 
 				<div class="row">
 					<div class="video span six">
 						<h2>View Demo</h2>
-						<video width="100%" controls>
+						<video width="100%" height="50%" controls>
 							<source src="video/_test.mp4" type="video/mp4">
 							<source src="video/_test.ogg" type="video/ogg">
 							Your browser does not support the video tag.
 						</video>
 						<p>NOTE: This is a demo version only and for security purposes is not extracting real data.</p>
 					</div>
-					
+
 
 					<div class="query-builder span six">
 						<h2>Follow Along</h2>
-						<object width="100%" height="50%" data="Try.html"></object>
-						<p>View the compiled code in CSDL:</p>
+					    <div id="query" class="query"><object width="100%" height="50%" data="Try.html"></object></div>
+						<p>CSDL
+						<div class = "csdlswitch" >
+							<input href = "#" type="checkbox" id="switch1" name="switch1" class="switch" checked/>
+							<label for="switch1">Query</label>
+						</div>
+						<div class = "csdlcode" id = "csdlcode" > 
+							<img src = "img/csdl3.png" height = "500" width = "500">
+						</div>
+						</p>
 					</div>
 					
-				</div>
+					<a id="send"class="button" href="#" data-value="">Send Me A Sample</a>
+					<ul>
+						<li>
+							<input href = "#" type="checkbox" id="csv" name="csv" checked/>
+							<label for="csv">.CSV</label>
+						</li>
+						<li>
+							<input href = "#" type="checkbox" id="json" name="json" checked/>
+							<label for="json">JSON</label>
+						</li>
+					</ul>
+					
 
-
-				<div class="block">					
-					<div class="sample">
-						<h2>Take A Sample</h2>
-						<!-- Marketo Form to go here -->
-						<small>So you can understand the data and filtering capability we provide, we would like to share this data with you.</small>
-						<small>Simply complete the form below and we will send you a link to a .csv file containing this example data. If you sign up for a DataSift account we will also share this filter with you so you can use it in your account. </small>
-						<ul>
-							<li><input type="text" placeholder="Name"></li>
-							<li><input type="text" placeholder="Email"></li>
-							<li><input type="text" placeholder="Twitter Username"></li>
-							<li><a class="button">Send Me a Sample</a></li>
-						</ul>
-					</div>
 				</div>
+				
+				
+	
 			</div>
+			
+			
 		</div>
 
 
@@ -167,7 +179,7 @@
 	<!-- JS -->
 	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
 	<script src="js/global.js"></script>
-	
+
 
 </body>
 </html>
