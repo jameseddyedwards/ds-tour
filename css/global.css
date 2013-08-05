@@ -8,7 +8,7 @@ nav li {display:inline-block; margin:0 5px;}
 nav a {background:#f9f9f9; border:6px solid #aab3bb; border-radius:100px; font-size:12px; height:100px; line-height:100px; text-transform:uppercase; width:100px;}
 nav a:hover,
 nav a.active {background:#efefef;}
-nav a.active {border:6px solid #EE7600; font-weight:bold;}
+nav a.active {border:6px solid #FF7F24; font-weight:bold;}
 
 
 /* Body */
@@ -25,7 +25,73 @@ section .active {display:block;}
 .role .button {font-size:12px; line-height:12px; padding:4px 6px;}
 
 .tour-filter {display:none;}
-.video {display:inline-block; float:left; height:50%; padding:50px; width:50%;}
+.video {display:inline-block; float:left; height:40%; width:50%; border:1px solid; border-radius:10px; border-color: green;}
 .filters {display:none;}
 .sample {border:2px solid; border-radius:25px;}
-.query-builder {display:inline-block; float:right; height:50%; width:50%;}
+.query-builder {display:inline-block; float:right; height:100%; width:50%; border:1px solid; border-radius:10px; border-color: green;}
+.query {height:100%; width:100%;}
+
+input.switch:empty
+{
+  margin-left: -1500px;
+}
+
+input.switch:empty ~ label
+{
+	position: relative;
+	float: left;
+	line-height: 1.6em;
+	text-indent: 4em;
+	margin: 0.2em 0;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+input.switch:empty ~ label:before,
+input.switch:empty ~ label:after
+{
+	position: absolute;
+	display: block;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	content: ' ';
+	width: 3.6em;
+	background-color: #000000;
+	border-radius: 0.3em;
+	box-shadow: inset 0 0.2em 0 rgba(0,0,0,0.3);
+	-webkit-transition: all 100ms ease-in;
+	transition: all 100ms ease-in;
+}
+input.switch:empty ~ label:after
+{
+	width: 1.4em;
+	top: 0.1em;
+	bottom: 0.1em;
+	margin-left: 0.1em;
+	background-color: #fff;
+	border-radius: 0.15em;
+	box-shadow: inset 0 -0.2em 0 rgba(0,0,0,0.2);
+}
+
+input.switch:checked ~ label:before
+{
+	background-color: #FF7F24;
+}
+input.switch:checked ~ label:after
+{
+	margin-left: 2em;
+}
+
+.csdlswitch{position: absolute; top: 90%; left: 54%;}
+
+.csdlcode
+{
+   display: inline-block; float:right; background-color:#FFF; display:none; height: 100%; width: 100%;
+}
+
+
+
