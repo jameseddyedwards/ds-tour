@@ -9,6 +9,7 @@ $(function(){
 			role : null,
 			industry : null
 		},
+		imgRootUrl = "img/filter/",
 		videoRootUrl = "",
 		filters = [{
 			name : "filter name",
@@ -29,7 +30,9 @@ $(function(){
 	
 	// Populate filter list
 	for (var i=0; i<filters.length; i++) {
+		var imgUrl = imgRootUrl + filters[i].file + ".png";
 		html += '<span class="name">' + filters[i].name + '</span>';
+		html += '<img src="' + imgUrl + '" alt="' + filters[i].name + '" />';
 	}
 	$("#filters").append(html);
 
