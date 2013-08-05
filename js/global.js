@@ -30,11 +30,9 @@ $(function(){
 			var imgUrl = imgRootUrl + filters[i].file + ".png",
 				classList = "";
 
-			for (var b=0; b<filters[i].classList.length; b++) {
-				classList += " " + filters[i].classList[b];
-			}
-
-			//console.log(classList);
+			classList = filters[i].classList.join(" ");
+			
+			console.log(classList);
 
 			html += '<li class="' + classList + '">';
 			html += '<span class="name">' + filters[i].name + '</span>';
