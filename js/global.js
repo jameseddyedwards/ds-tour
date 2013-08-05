@@ -14,15 +14,11 @@ $(function(){
 		filters = [{
 			name : "filter name",
 			file : "video-file",
-			roles : ["list", "list"],
-			technical : true,
-			industries : ["list", "list"]
+			classList : ["technical", "marketing"]
 		}, {
 			name : "filter name",
 			file : "video-file",
-			classes : ["list", "list"],
-			technical : true,
-			industries : ["list", "list"]
+			classList : ["agency"]
 		}],
 		html = "",
 		i = 0;
@@ -31,9 +27,16 @@ $(function(){
 	// Populate filter list
 	html += '<ul>';
 		for (var i=0; i<filters.length; i++) {
-			var imgUrl = imgRootUrl + filters[i].file + ".png";
+			var imgUrl = imgRootUrl + filters[i].file + ".png",
+				classList = "";
 
-			html += '<li>';
+			for (var b=0; b<filters[i].classList.length; b++) {
+				classList += " " + filters[i].classList[b];
+			}
+
+			//console.log(classList);
+
+			html += '<li class="' + classList + '">';
 			html += '<span class="name">' + filters[i].name + '</span>';
 			html += '<img src="' + imgUrl + '" alt="' + filters[i].name + '" />';
 			html += '</li>';
