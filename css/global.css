@@ -25,10 +25,10 @@ section .active {display:block;}
 .role .button {font-size:12px; line-height:12px; padding:4px 6px;}
 
 .tour-filter {display:none;}
-.video {display:inline-block; float:left; height:40%; width:50%; border:1px solid; border-radius:10px; border-color: green;}
+.video {display:inline-block; float:left; height:40%; width:50%; border:1px solid; border-radius:10px; border-color: #507786;}
 .filters {display:none;}
 .sample {border:2px solid; border-radius:25px;}
-.query-builder {display:inline-block; float:right; height:100%; width:50%; border:1px solid; border-radius:10px; border-color: green;}
+.query-builder {display:inline-block; float:right; height:100%; width:50%; border:1px solid; border-radius:10px; border-color: #507786;}
 .query {height:100%; width:100%;}
 
 input.switch:empty
@@ -60,7 +60,7 @@ input.switch:empty ~ label:after
 	left: 0;
 	content: ' ';
 	width: 3.6em;
-	background-color: #000000;
+	background-color: #333;
 	border-radius: 0.3em;
 	box-shadow: inset 0 0.2em 0 rgba(0,0,0,0.3);
 	-webkit-transition: all 100ms ease-in;
