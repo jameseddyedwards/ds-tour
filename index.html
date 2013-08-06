@@ -108,47 +108,54 @@
 			<!-- Filter Library -->
 			<div id="filter-demo" class="filter-demo">
 
-				<h2>Sample Filter Page</h2>
+				<h2>Geolocation Filter</h2>
 				
-				<p>Filter Description....</p>
 
 				<div class="row">
+					
+					<div id="view" class="view"><h1>View Demo</h1></div>
+					<div id="new" class ="new"><h1>Get A Sample</h1></div>
+					
 					<div class="video span six">
-						<h2>View Demo</h2>
-						<video width="100%" height="50%" controls>
-							<source src="video/_test.mp4" type="video/mp4">
-							<source src="video/_test.ogg" type="video/ogg">
-							Your browser does not support the video tag.
-						</video>
-						<p>NOTE: This is a demo version only and for security purposes is not extracting real data.</p>
+						<div id="demo" class="demo">
+							<video width="100%" height="62%" controls>
+								<source src="video/geolocationtest.mp4" type="video/mp4">
+								<source src="video/geolocationtest.ogg" type="video/ogg">
+								Your browser does not support the video tag.
+							</video>
+						</div>
+						<div id="marketo" class="marketo">
+							<img src = "img/form.png" height = "500" width = "500">
+							<a class="again" id= "again">View Demo Again</a>
+							<ul>
+								<li>
+									<input href = "#" type="checkbox" id="csv" name="csv" checked/>
+									<label for="csv">.csv Sample</label>
+								</li>
+								<li>
+									<input href = "#" type="checkbox" id="JSON" name="JSON" checked/>
+									<label for="JSON">JSON Sample</label>
+								</li>
+								<li>
+									<a class="button small" href="#" data-value="sample">Send Me A Sample</a>
+								</li>
+							</ul>
+						</div>
 					</div>
-
+					
+					<div id="follow" class="follow"><h1>Follow Along</h1></div>
 
 					<div class="query-builder span six">
-						<h2>Follow Along</h2>
-					    <div id="query" class="query"><object width="100%" height="50%" data="Try.html"></object></div>
-						<p>CSDL
+					    <div id="query" class="query"><object width="100%" height="62%" data="Try.html"></object></div>
+					    <div class="compile" id="compile"><p>View the compiled code in CSDL</p></div>
 						<div class = "csdlswitch" >
 							<input href = "#" type="checkbox" id="switch1" name="switch1" class="switch" checked/>
-							<label for="switch1">Query</label>
+							<label for="switch1">ON/OFF</label>
 						</div>
 						<div class = "csdlcode" id = "csdlcode" > 
 							<img src = "img/csdl3.png" height = "500" width = "500">
 						</div>
-						</p>
 					</div>
-					
-					<a id="send"class="button" href="#" data-value="">Send Me A Sample</a>
-					<ul>
-						<li>
-							<input href = "#" type="checkbox" id="csv" name="csv" checked/>
-							<label for="csv">.CSV</label>
-						</li>
-						<li>
-							<input href = "#" type="checkbox" id="json" name="json" checked/>
-							<label for="json">JSON</label>
-						</li>
-					</ul>
 					
 
 				</div>
