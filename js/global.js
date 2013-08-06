@@ -124,6 +124,21 @@ $(function(){
 	$("#showme").click(function() {
 		$("#filters").append(html);
 	});
+	
+	//Once the video finishes we will display the Marketo Form in place of it.
+	$("video").bind("ended", function() {
+   		$("#demo").hide();
+   		$("#marketo").show();
+   		$("#view").hide();
+   		$("#new").show();
+	});
+
+	$("#again").click(function() {
+		$("#demo").show();
+   		$("#marketo").hide();
+   		$("#view").show();
+   		$("#new").hide();
+	});
 
 
 });
