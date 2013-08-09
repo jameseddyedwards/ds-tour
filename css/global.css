@@ -25,7 +25,7 @@ section .active {display:block;}
 .role .button {font-size:12px; line-height:12px; padding:4px 6px;}
 
 .tour-filter {display:none;}
-.video {display:inline-block; float:left; height:50%; padding-right:.25cm; padding-bottom:55px; padding-left:.25cm; width:50%; border:1px solid; border-radius:10px; border-color: #000000;}
+.video {display:inline-block; float:left; height:50%; padding-right:.25cm; padding-bottom:55px; padding-left:.50cm; width:50%; border:1px solid; border-radius:10px; border-color: #000000;}
 .filters {display:none;}
 .sample {border:2px solid; border-radius:25px;}
 .query-builder {display:inline-block; float:right; padding-left:.25cm; padding-bottom:55px; height:50%; width:50%; border:1px solid; border-radius:10px; border-color: #000000;}
