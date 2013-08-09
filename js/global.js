@@ -12,14 +12,14 @@ $(function(){
 		imgRootUrl = "img/filter/",
 		videoRootUrl = "video/",
 		filters = [{
-			name : "Sample Filter",
+			name : "Geolocation-Filter",
 			vfile : "video-file", //video file
 			ifile : "map", //image file
 			classList : ["technical", "marketing"]
 		}, {
-			name : "Sample Filter2",
+			name : "Monitor-Filter",
 			vfile : "video-file",
-			ifile : "map",
+			ifile : "monitor",
 			classList : ["agency"]
 		}],
 		html = "",
@@ -30,20 +30,26 @@ $(function(){
 	html += '<ul>';
 		for (var i=0; i<filters.length; i++) {
 			var imgUrl = imgRootUrl + filters[i].ifile + ".png",
+			filterHTML = filters[i].name + ".html",
 			classList = "";
 
-			classList = filters[i].classList.join(" ");
+			classList = filters[i].classList.join(" "),
 
 			console.log(classList);
 
 			html += '<li class="' + classList + '">';
 			html += '<span class="name">' + filters[i].name + '</span>';
-			html += '<img src="' + imgUrl + '" alt="' + filters[i].name + '" height ="300" width="300" />';
+			html += '<a href="' + filterHTML + '">';
+			html += '<img src="' + imgUrl + '"  alt="' + filters[i].name + '" height ="300" width="300"/>';
+			html += '</a>';
 			html += '</li>';
+			
+			
+			
 		}
 	html += '</ul>';
 	
-
+	
 
 	nav.click(function() {
 		var targetId = $("#" + $(this).data("target")),
@@ -139,6 +145,7 @@ $(function(){
    		$("#view").show();
    		$("#new").hide();
 	});
-
+	
+	
 
 });
