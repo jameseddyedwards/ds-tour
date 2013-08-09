@@ -25,11 +25,12 @@ section .active {display:block;}
 .role .button {font-size:12px; line-height:12px; padding:4px 6px;}
 
 .tour-filter {display:none;}
-.video {display:inline-block; float:left; height:50%; width:50%; border:1px solid; border-radius:10px; border-color: #507786;}
+.video {display:inline-block; float:left; height:50%; padding-right:.25cm; padding-bottom:55px; padding-left:.25cm; width:50%; border:1px solid; border-radius:10px; border-color: #000000;}
 .filters {display:none;}
 .sample {border:2px solid; border-radius:25px;}
-.query-builder {display:inline-block; float:right; height:50%; width:50%; border:1px solid; border-radius:10px; border-color: #507786;}
-.query {height:50%; width:100%;}
+.query-builder {display:inline-block; float:right; padding-left:.25cm; padding-bottom:55px; height:50%; width:50%; border:1px solid; border-radius:10px; border-color: #000000;}
+.query {height:100%; width:100%;}
+
 
 input.switch:empty
 {
@@ -86,14 +87,14 @@ input.switch:checked ~ label:after
 	margin-left: 2em;
 }
 
-.csdlswitch{position: absolute; top: 91%; left: 55%;}
+.csdlswitch{position: absolute; top: 94%; left: 56%;}
 
 .csdlcode
 {
    display: inline-block; float:right; background-color:#FFF; display:none; height: 100%; width: 100%;
 }
 
-.compile {position: absolute; top: 91.5%; left: 23%; cursor:help;}
+.compile {position: absolute; top: 94.5%; left: 23%;}
 
 .marketo {display: none;}
 
@@ -101,9 +102,8 @@ input.switch:checked ~ label:after
 
 .again {color: #FF7F24;}
 
-.new {display: none; position: absolute; top:70%; left: 15%;}
+.new {display: none;}
 
-.view {position: absolute; top:69%; left: 15%;}
+.case {color: #FF7F24;}
 
-.follow {position: absolute; top:69%; left: 66%;}
-
+.base {padding-bottom: 10px;}
