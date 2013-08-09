@@ -122,8 +122,8 @@ $(function(){
 	}
 	
 	$("#switch1").click(function() {
-    	$("#csdlcode").toggle();
-    	$("#query").toggle(); //can we save the current query state in a cookie?
+    		$("#csdlcode").toggle();
+    		$("#query").toggle(); //can we save the current query state in a cookie?
 	});
 	
 	//Append the HTML once the user clicks the 'Show me some Filters' button.
